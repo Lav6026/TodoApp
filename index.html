@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+        }
+    
+        .container {
+          max-width: 600px;
+         background-color: #FF6600;
+          margin: 0 auto;
+          border: 1px solid #cccccc;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+          text-align: center;
+        }
+    
+        input[type="text"],
+        input[type="date"],
+        select,
+        button {
+          margin-bottom: 10px;
+          width: calc(100% - 22px);
+          padding: 8px;
+        }
+    
+        button {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+    
+        button:hover {
+          opacity: 0.8;
+        }
+    
+        .task {
+          margin-bottom: 10px;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+        }
+    
+        .search {
+          margin-bottom: 10px;
+        }
+
+        .task {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .delete-btn {
+      margin-left: auto;
+      font-size: 12px;
+      padding: 5px;
+      cursor: pointer;
+      max-width: 50px;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: #888;
+    }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form id="taskForm">
+          <input type="text" id="taskName" placeholder="Task Name" required>
+          <input type="date" id="dueDate" required>
+          <select id="priority" required>
+            <option value="low">Low Priority</option>
+            <option value="medium">Medium Priority</option>
+            <option value="high">High Priority</option>
+          </select>
+          <button type="submit" id="addTaskBtn">Add Task</button>
+        </form>
+        <input type="text" id="search" class="search" placeholder="Search tasks">
+        <div id="taskList"></div>
+        <div id="counters"></div>
+      </div>
+    
+
+      
+    
+      <script src="./script.js"></script>
+</body>
+</html>
